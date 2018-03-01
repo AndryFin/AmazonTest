@@ -18,7 +18,7 @@ describe('Amazon test', function () {
   });
 
   it('search for product', function () {
-    element(by.id('twotabsearchtextbox')).sendKeys("jeans").then(function(){
+    element(by.id('twotabsearchtextbox')).sendKeys(product).then(function(){
       element(by.xpath('//*[@id="nav-search"]//*[@type="submit"]')).click();
     });
   });
@@ -36,6 +36,7 @@ describe('Amazon test', function () {
   });
 
   it('go to Product page', function () {
+    console.log('Most expensive item number on the search result page: '+(maxItemNumber+1));
     element.all(by.css('.sx-price.sx-price-large')).get(maxItemNumber).click();
   });
 
@@ -65,6 +66,7 @@ describe('Amazon test', function () {
   });
 
   it('add item to the cart', function () {
+    console.log('Actual item price: '+actualPrice);
     element(by.id("add-to-cart-button")).click();
   });
 
@@ -79,6 +81,7 @@ describe('Amazon test', function () {
   });
 
   it('compare item price and cart subtotal', function () {
+    console.log('Subtotal: '+subtotalPrice);
     expect(subtotalPrice).toEqual(actualPrice);
   });
 
