@@ -6,3 +6,4 @@
 #Start up a server with: webdriver-manager start
 #Open another command line window and go to the project folder where you have conf.js and test.js files
 #Run command: protractor --params.productName="Nike shoes" conf.js 
+#More info: http://www.protractortest.org/#/tutorial
