@@ -5,5 +5,5 @@
 #The webdriver-manager is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries by running:  webdriver-manager update
 #Start up a server with: webdriver-manager start
 #Open another command line window and go to the project folder where you have conf.js and test.js files.
-#Run command: protractor --params.productName="Nike shoes" conf.js
+#Run command: protractor --params.productName="Nike Shoes" conf.js
 #More info: http://www.protractortest.org/#/tutorial
